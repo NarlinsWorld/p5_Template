@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sketch</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+  <link rel="shortcut icon" href="libraries/drdrugus.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/addons/p5.sound.min.js"></script>
+  <script>MathJax = { tex: { inlineMath: [["$", "$"], ["\(", "\)"]] } };</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4.1.0/tex-mml-chtml.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script> -->
+</head>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+<body>
+  <button id="clearr">Clear</button>
+  <div id="container">
+    <div id="Div1">
+      <!-- Your text data here -->
+      <!-- <p>Some text information</p> -->
+    </div>
+    <div id="cvs">
+      <!-- Your p5.js canvas will go here -->
+    </div>
+  </div>
 
-    <script src="libraries/p5.min.js"></script>
-    <!-- <script src="libraries/p5.sound.min.js"></script> -->
-  </head>
+  <!-- EXAMPLE TO BE REMOVED This is NOT in Div1 -->
+  <br><span style="color:red" ;> From index.html<br>
+    $\text{Inline math: } b=\frac{4}{7}$
+    $$\text{Display math: }7\equiv 11 \pmod 4$$
+  </span>
 
-  <body>
-    <script src="sketch.js"></script>
-  </body>
+  
+  <script src="util.js"></script>
+  <script src="main.js"></script>
+</body>
+<!-- use the following code in javascript (if needed) to force js display.  
+ if (window.MathJax) {MathJax.typeset();} -->
+
 </html>
