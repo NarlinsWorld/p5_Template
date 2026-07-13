@@ -2,7 +2,7 @@
 appendHTML("Div1","From javascript"); //double quote and no latex
 appendHTML("Div1",`$\\LaTeX$`);   //tic marks and double \\
 appendHTML("Div1",`$$\\text{Display math: }7\\equiv 11 \\pmod 4$$ <br>
-  <li>a list element</li>`);
+  <li>an example list element</li>`);
 //if you use a different "Div2" be sure to put it into index.html and css
 
 function setup() {
