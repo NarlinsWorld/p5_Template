@@ -7,7 +7,7 @@ Only difference between this and index.html latex, is the double \\
 */
 
 function appendHTML(myDiv, stuffToAdd) {
-  const ele = document.getElementById("myDiv");
+  const ele = document.getElementById(myDiv);
   const newDiv = document.createElement("div");
   newDiv.innerHTML = stuffToAdd;
   ele.appendChild(newDiv);
