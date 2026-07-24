@@ -14,6 +14,25 @@ function appendHTML(myDiv, stuffToAdd) {
   document.getElementById('Div1').scrollIntoView({ behavior: 'smooth' });
 }
 
+/*P is a point P[0],P[1] for x,y.  Q and point likewise
+This returns the perpendicular distance for point to line PQ. */
+function dist2LinePQ(P, Q, point) {
+  let Qx = Q[0];
+  let Qy = Q[1];
+  let Px = P[0];
+  let Py = P[1];
+  let x = point[0];
+  let y = point[1];
+  let ux = Qx - Px; //direction P to Q
+  let uy = Qy - Py;
+  let upx = -uy; //perpendicular vectors
+  let upy = ux;
+  //vx and vy are the perpendicular direction vector components
+  let vx = upx * (((Px - x) * upx + (Py - y) * upy) / (upx * upx + upy * upy));
+  let vy = upy * (((Px - x) * upx + (Py - y) * upy) / (upx * upx + upy * upy));
+  return Math.sqrt(vx * vx + vy * vy);
+}
+
 document.getElementById("clearr").addEventListener("click", () => {
   document.getElementById('Div1').innerHTML = "";
 
