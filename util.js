@@ -15,7 +15,7 @@ function appendHTML(myDiv, stuffToAdd) {
 }
 
 /*P is a point P[0],P[1] for x,y.  Q and point likewise
-This returns the perpendicular distance for point to line PQ. */
+This returns the perpendicular distance from point to line PQ. */
 function dist2LinePQ(P, Q, point) {
   let Qx = Q[0];
   let Qy = Q[1];
@@ -31,6 +31,11 @@ function dist2LinePQ(P, Q, point) {
   let vx = upx * (((Px - x) * upx + (Py - y) * upy) / (upx * upx + upy * upy));
   let vy = upy * (((Px - x) * upx + (Py - y) * upy) / (upx * upx + upy * upy));
   return Math.sqrt(vx * vx + vy * vy);
+}
+
+function randomIntFromInterval(min, max) {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 document.getElementById("clearr").addEventListener("click", () => {
