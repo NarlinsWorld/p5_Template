@@ -115,17 +115,20 @@ input.ch-width1 {
 }
 
 #Div2 {
-  /* Put Div2 strictly in the left column, row 2 */
-  grid-column: 1;
-  grid-row: 2;
+  /* Span both rows */
+  grid-column: 1; 
+  grid-row: 1 / span 2;
   
-  /* Allow it to fill the 400px column (under the canvas) */
+  /* Snap to the top of the grid */
+  align-self: start;
+  
+  /* Magic Number: Canvas (400px) + Gap (10px) + Any visual padding you want */
+  margin-top: 410px; 
+  
+  /* Keep your existing styles */
   width: 100%;
-  
-  /* Ensure long words don't break out of the box */
   word-wrap: break-word;
   overflow-wrap: break-word;
-  
   border: 1px solid blue;
   padding: 10px;
   box-sizing: border-box;
@@ -134,11 +137,12 @@ input.ch-width1 {
 #Div3 {
   grid-column: 2;
   grid-row: 2;
-  
-  /* Ensure it sits at the top of row 2, even if Div2 is short */
   align-self: start;
   
-  /* If Div3 is empty, it collapses to 0 height. */
+  /* Keep your existing styles */
+  /*white-space: nowrap; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   border: 1px solid red;
   padding: 10px;
   box-sizing: border-box;
