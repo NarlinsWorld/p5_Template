@@ -9,13 +9,27 @@ canvas {
   display: block;
 }
 
-.animateOn {
-  background-color: green;
+/* for an ON OFF button */
+/*
+#btnVariable {
+  padding: 6px 16px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+} */
+
+/* ON state: red background, white text */
+#btnVariable.on {
+  background-color: red;
   color: white;
 }
 
-.animateOff {
-  background-color: red;
+/* OFF state: green background, white text */
+#btnVariable.off {
+  background-color: green;
   color: white;
 }
 
